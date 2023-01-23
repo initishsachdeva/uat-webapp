@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/Header";
+import NavBar from "./components/navbar/NavBar";
+import UploadJiraItems from "./components/upload-jiraItems/UploadJiraItems";
+import Backlog from "./components/backlog/Backlog";
+import ActiveSprints from "./components/active-sprints/ActiveSprints";
+import ClosedSprints from "./components/closed_sprints/ClosedSprints";
+//import ErrorPage from "./components/error-page/ErrorPage";
+import { Routes, Route } from 'react-router-dom';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="row">
+        <NavBar />
+        <Routes>
+          <Route path='/backlog' element={<Backlog />}></Route>
+          <Route path='/upload-jira-items' element={<UploadJiraItems />}></Route>
+          <Route path='/active-sprint' element={<ActiveSprints />}></Route>
+          <Route path='/closed-sprints' element={<ClosedSprints />}></Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 
