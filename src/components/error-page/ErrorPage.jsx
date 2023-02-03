@@ -2,7 +2,7 @@ import "./errorpagestylestyle.css";
 
 function ErrorPage () {
     return (
-      <div>
+      <div className="col-9">
         No Page Found
       </div>
     );

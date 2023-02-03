@@ -2,7 +2,7 @@ import "./activesprintstyle.css";
 
 function ActiveSprints() {
   return (
-    <div>
+    <div className="col-9">
       <h1> Active Sprints! </h1>
     </div>
   );
