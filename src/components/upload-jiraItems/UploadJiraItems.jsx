@@ -1,4 +1,4 @@
-import "./uploadjiraitemssstyle.css";
+import "./uploadjiraitemsstyle.css";
 
 function UploadJiraItems() {
   return (
